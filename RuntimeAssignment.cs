@@ -1,11 +1,15 @@
 namespace ConsoleApp16
 {
+    class car
+    {
+        public abstract void Ignite();
+    }
 
-    class TataCar
+    class TataCar: car
     {
         //Dependency
         RevtronEngine _engine=new RevtronEngine(); //composition
-        public void Ignite() {
+        public override void Ignite() {
         _engine.Start();
         }
         public void Halt() {
